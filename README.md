@@ -3,24 +3,11 @@ About git-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/git-feedstock/blob/main/LICENSE.txt)
 
-
-About git
----------
-
 Home: https://git-scm.com/
 
 Package license: GPL-2.0-or-later and LGPL-2.1-or-later
 
-Summary: distributed version control system
-
-About git
----------
-
-Home: https://git-scm.com/
-
-Package license: GPL-2.0-or-later and LGPL-2.1-or-later
-
-Summary: distributed version control system
+Summary: distributed version control system (dev build)
 
 Current build status
 ====================
@@ -74,13 +61,6 @@ Current build status
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/git-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_" alt="variant">
                 </a>
               </td>
-            </tr><tr>
-              <td>win_64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=364&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/git-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
-                </a>
-              </td>
             </tr>
           </tbody>
         </table>
@@ -99,14 +79,14 @@ Current release info
 Installing git
 ==============
 
-Installing `git` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `git` from the `conda-forge/label/git_dev` channel can be achieved by adding `conda-forge/label/git_dev` to your channels with:
 
 ```
-conda config --add channels conda-forge
+conda config --add channels conda-forge/label/git_dev
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `git` can be installed with `conda`:
+Once the `conda-forge/label/git_dev` channel has been enabled, `git` can be installed with `conda`:
 
 ```
 conda install git
@@ -121,26 +101,26 @@ mamba install git
 It is possible to list all of the versions of `git` available on your platform with `conda`:
 
 ```
-conda search git --channel conda-forge
+conda search git --channel conda-forge/label/git_dev
 ```
 
 or with `mamba`:
 
 ```
-mamba search git --channel conda-forge
+mamba search git --channel conda-forge/label/git_dev
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search git --channel conda-forge
+mamba repoquery search git --channel conda-forge/label/git_dev
 
 # List packages depending on `git`:
-mamba repoquery whoneeds git --channel conda-forge
+mamba repoquery whoneeds git --channel conda-forge/label/git_dev
 
 # List dependencies of `git`:
-mamba repoquery depends git --channel conda-forge
+mamba repoquery depends git --channel conda-forge/label/git_dev
 ```
 
 
@@ -216,4 +196,5 @@ Feedstock Maintainers
 * [@ocefpaf](https://github.com/ocefpaf/)
 * [@pelson](https://github.com/pelson/)
 * [@scopatz](https://github.com/scopatz/)
+* [@ytausch](https://github.com/ytausch/)
 
